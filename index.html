@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Annie's Flickr Photo Page</title>
+        <link rel="icon" type="image/png" href="photo.png">
+        <link rel="stylesheet" type="text/css" href="./css/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">   
+    </head>
+    <body class="container">
+
+        <div class="page-header">
+            <h1>Photo Page with Flickr API <small> Annie Cook</small></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input id="search-field" type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onclick="newSearch()">Search</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row photo-grid">
+            <div id="js-thumbnails"></div>
+        </div>
+
+        <div id="js-lightbox" class="lightbox" onclick="closeLightbox()">
+            <h3 id="js-lightbox-title" class="lightbox-title" ></h3>
+            <table class="lightbox_table">
+                <tr>
+                    <td class="align-right">
+                        <button id="js-button-left" type="button" class="btn btn-default" align="left" aria-label="Left Arrow">
+                            <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                    <td class="lightbox-table-cell" align="center">
+                         <div id="js-lightbox-content" class="lightbox-content"></div>
+                   </td>
+                    <td>
+                        <button id="js-button-right" type="button" class="btn btn-default" align="right" aria-label="Right Arrow">
+                            <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+                        </button>
+                    </td>
+
+                </tr>
+           </table>
+        </div>
+
+    <script src="js/main.js"></script>
+    </body>
+</html>
